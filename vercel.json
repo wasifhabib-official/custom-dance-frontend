@@ -11,5 +11,11 @@
       "destination": "https://www.customdancepatches.com/:path*",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "destination": "/"
+    }
   ]
 }
