@@ -1,7 +1,13 @@
 {
   "redirects": [
     {
-      "source": "https://customdancepatches.com/:path*",
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "customdancepatches.com"
+        }
+      ],
       "destination": "https://www.customdancepatches.com/:path*",
       "permanent": true
     }
