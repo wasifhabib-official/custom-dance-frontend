@@ -1,8 +1,9 @@
 {
-  "rewrites": [
+  "redirects": [
     {
-      "source": "/((?!.*\\..*).*)",
-      "destination": "/"
+      "source": "https://customdancepatches.com/:path*",
+      "destination": "https://www.customdancepatches.com/:path*",
+      "permanent": true
     }
   ]
 }
