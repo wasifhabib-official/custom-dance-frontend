@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://customdancepatches.com/sitemap.xml

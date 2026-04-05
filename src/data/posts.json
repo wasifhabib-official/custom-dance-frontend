@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "slug": "story-behind-patches",
+    "title": "The Story Behind Custom Dance Patches",
+    "excerpt": "How Stacy turned love, sweat, and glitter into a brand dancers adore.",
+    "date": "2025-11-01",
+    "image": "/images/story.jpg",
+    "content": "Full article text goes here. You can expand this with Stacy’s brand story."
+  },
+  {
+    "id": 2,
+    "slug": "patch-ideas",
+    "title": "Top 5 Patch Ideas for Dance Studios",
+    "excerpt": "Creative ways to showcase your studio’s identity with custom patches.",
+    "date": "2025-11-15",
+    "image": "/images/ideas.jpg",
+    "content": "Here you’ll list creative patch ideas and explain why they work."
+  }
+]
