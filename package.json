@@ -7,7 +7,7 @@
     "frontend": "vite",
     "backend": "node server.cjs",
     "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
-    "build": "vite build",
+    "build": "vite build && npx react-snap",
     "preview": "vite preview"
   },
   "reactSnap": {
@@ -20,7 +20,7 @@
       "--disable-setuid-sandbox"
     ],
     "timeout": 60000,
-    "waitFor": 2000,
+    "waitFor": 3000,
     "include": [
       "/",
       "/patch-types",
@@ -69,6 +69,7 @@
     "eslint": "^8.57.1",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
-    "vite": "^4.5.14"
+    "vite": "^4.5.14",
+    "react-snap": "^1.23.0"
   }
 }

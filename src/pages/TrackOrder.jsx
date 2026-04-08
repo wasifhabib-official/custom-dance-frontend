@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { 
   Search, 
@@ -34,6 +34,12 @@ export default function TrackOrder() {
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState("");
   const [note, setNote] = useState("");
+
+  useEffect(() => {
+    if (navigator.userAgent === "ReactSnap") {
+      window.SNAP_READY = true;
+    }
+  }, []);
 
   const fetchAll = async (id) => {
     const res = await fetch(`/api/orders/track/${id}`);
