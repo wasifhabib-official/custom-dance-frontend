@@ -7,19 +7,21 @@
     "frontend": "vite",
     "backend": "node server.cjs",
     "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+
     "build": "vite build",
-    "postbuild": "react-snap",
+    "build:seo": "vite build && react-snap",
+
     "preview": "vite preview"
   },
+
   "reactSnap": {
     "source": "dist",
     "inlineCss": false,
-    "crawl": true,
-    "skipThirdPartyRequests": false,
+    "crawl": false,
+    "skipThirdPartyRequests": true,
     "puppeteerArgs": [
       "--no-sandbox",
-      "--disable-setuid-sandbox",
-      "--disable-web-security"
+      "--disable-setuid-sandbox"
     ],
     "timeout": 60000,
     "waitFor": "#root > *",
@@ -39,6 +41,7 @@
       "/refund-policy"
     ]
   },
+
   "dependencies": {
     "@radix-ui/react-label": "^2.1.8",
     "@radix-ui/react-slot": "^1.1.1",
@@ -62,6 +65,7 @@
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7"
   },
+
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.19",
     "@vitejs/plugin-legacy": "^4.1.1",
