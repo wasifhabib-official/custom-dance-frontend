@@ -7,20 +7,22 @@
     "frontend": "vite",
     "backend": "node server.cjs",
     "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
-    "build": "vite build && npx react-snap",
+    "build": "vite build",
+    "postbuild": "react-snap",
     "preview": "vite preview"
   },
   "reactSnap": {
     "source": "dist",
     "inlineCss": false,
-    "crawl": false,
-    "skipThirdPartyRequests": true,
+    "crawl": true,
+    "skipThirdPartyRequests": false,
     "puppeteerArgs": [
       "--no-sandbox",
-      "--disable-setuid-sandbox"
+      "--disable-setuid-sandbox",
+      "--disable-web-security"
     ],
     "timeout": 60000,
-    "waitFor": 3000,
+    "waitFor": "#root > *",
     "include": [
       "/",
       "/patch-types",

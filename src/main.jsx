@@ -4,10 +4,19 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import "./index.css";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+const rootElement = document.getElementById("root");
+
+ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
     <BrowserRouter>
       <App />
     </BrowserRouter>
   </React.StrictMode>
 );
+
+// ✅ CRITICAL: react-snap hook for React 18
+if (navigator.userAgent === "ReactSnap") {
+  window.snapSaveState = () => {
+    return document.getElementById("root").innerHTML;
+  };
+}
