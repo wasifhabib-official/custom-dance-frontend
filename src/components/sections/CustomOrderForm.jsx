@@ -277,7 +277,6 @@ const CustomOrderForm = () => {
       <Helmet>
         <title>Get a Quote | Order Custom Dance Patches for Your Studio</title>
         <meta name="description" content="Ready to elevate your studio's brand? Upload your logo and choose your patch style. Fast, professional quoting and Free Worldwide Shipping." />
-        <link rel="canonical" href="https://customdancepatches.com/custom-order" />
       </Helmet>
 
       <div className="max-w-7xl mx-auto mb-10 text-center">

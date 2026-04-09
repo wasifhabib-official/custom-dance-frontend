@@ -37,7 +37,6 @@ const BlogPost = () => {
           name="description"
           content={post.excerpt || "Read the latest insights and inspiration from Stacy's Studio Journal at Custom Dance Patches."}
         />
-        <link rel="canonical" href={`https://customdancepatches.com/blog/${post.slug}`} />
       </Helmet>
 
       {/* Progress Bar */}

@@ -67,7 +67,6 @@ const OurStory = () => {
         <title>Our Story | 15 Years of Excellence in Custom Dance Patches</title>
         <meta name="description" content="Meet Stacy, the dance veteran behind Custom Dance Patches. 15+ years of industry experience creating premium patches for studios worldwide." />
         {/* ✅ FIXED: Added missing canonical tag pointing to /our-story */}
-        <link rel="canonical" href="https://customdancepatches.com/our-story" />
       </Helmet>
 
       {/* HERO - Focused on the "Why" */}

@@ -9,7 +9,7 @@
     "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
 
     "build": "vite build",
-    "build:seo": "vite build && react-snap",
+    "build:seo": "vite build && node scripts/react-snap-runner.cjs && node scripts/seo-postbuild.cjs",
 
     "preview": "vite preview"
   },
@@ -24,7 +24,7 @@
       "--disable-setuid-sandbox"
     ],
     "timeout": 60000,
-    "waitFor": "#root > *",
+    "waitFor": "window.snapReady === true",
     "include": [
       "/",
       "/patch-types",

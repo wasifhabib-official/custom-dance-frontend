@@ -28,7 +28,6 @@ const Blog = () => {
           name="description"
           content="Explore Stacy's Studio Journal for dance patch inspiration, studio branding tips, and custom patch guides. Helping dance studios worldwide look their best."
         />
-        <link rel="canonical" href="https://customdancepatches.com/blog" />
       </Helmet>
 
       {/* Editorial Header */}

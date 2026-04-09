@@ -141,7 +141,6 @@ const PatchTypes = () => {
           content="Explore our professional patch styles. From fuzzy 3D Chenille for varsity jackets to high-detail Embroidery for studio logos. Free shipping to USA, UK, CA, & AU."
         />
         {/* ✅ FIXED: Added missing canonical tag pointing to /patch-types */}
-        <link rel="canonical" href="https://customdancepatches.com/patch-types" />
       </Helmet>
 
       {/* Hero Section */}
