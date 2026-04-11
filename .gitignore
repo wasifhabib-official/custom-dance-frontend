@@ -11,10 +11,6 @@ lerna-debug.log*
 # Dependencies
 node_modules
 
-# Build outputs
-dist
-dist-ssr
-
 # Environment variables (IMPORTANT)
 lerna-debug.log*
 
