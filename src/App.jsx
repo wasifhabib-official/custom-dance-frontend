@@ -6,7 +6,6 @@ import AdminLayout from "./layouts/AdminLayout";
 
 import WhatsAppButton from "./components/WhatsAppButton";
 import ScrollToTop from "./components/ScrollToTop";
-import SnapRouteWrapper from "./components/SnapRouteWrapper";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -50,406 +49,65 @@ import AdminOrderDetails from "./pages/AdminOrderDetails";
 import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
-  const isSnap =
-    typeof navigator !== "undefined" &&
-    navigator.userAgent === "ReactSnap";
-
   return (
     <HelmetProvider>
-      {!isSnap && <ScrollToTop />}
-
+      <ScrollToTop />
       <Routes>
-        <Route
-          path="/"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <Home />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/about"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <About />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/blog"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <Blog />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/blog/:slug"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <BlogPost />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/contact"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <Contact />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/contact-page"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <ContactPage />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/custom-order"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <CustomOrder />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/gallery"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <Gallery />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/hero"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <Hero />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/hero-image"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <HeroImage />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/our-story"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <OurStory />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/patch-types"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <PatchTypes />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/patch-types/embroidered-patches"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <EmbroideredPatches />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/patch-types/chenille-patches"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <ChenillePatches />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/patch-types/woven-patches"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <WovenPatches />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/patch-types/sequin-patches"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <SequinPatches />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/patch-types/glossy-sticker-patches"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <GlossyStickerPatches />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/patch-types/vinyl-sticker-patches"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <VinylStickerPatches />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/pricing"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <Pricing />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/size-guide"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <SizeGuide />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/backing-guide"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <BackingGuide />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/success"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <Success />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/payment-success"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <PaymentSuccess />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/terms"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <TermsOfService />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/privacy"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <PrivacyPolicy />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/refund-policy"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <RefundPolicy />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/approve-action/:token"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <ApproveAction />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/request-changes/:token"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <RequestChanges />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/mockup-confirmed"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <MockupConfirmed />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/mockup-approved/:orderId"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <MockupApproved />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/mockup-revision/:orderId"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <MockupRevision />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/track-order"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <TrackOrder />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/welcome-message"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <WelcomeMessage />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/upload-test"
-          element={
-            <SnapRouteWrapper>
-              <UploadTest />
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/form-test"
-          element={
-            <SnapRouteWrapper>
-              <FormIsolationTest />
-            </SnapRouteWrapper>
-          }
-        />
-        <Route
-          path="/admin/login"
-          element={
-            <SnapRouteWrapper>
-              <AdminLogin />
-            </SnapRouteWrapper>
-          }
-        />
+        <Route path="/" element={<Layout><Home /></Layout>} />
+        <Route path="/about" element={<Layout><About /></Layout>} />
+        <Route path="/blog" element={<Layout><Blog /></Layout>} />
+        <Route path="/blog/:slug" element={<Layout><BlogPost /></Layout>} />
+        <Route path="/contact" element={<Layout><Contact /></Layout>} />
+        <Route path="/contact-page" element={<Layout><ContactPage /></Layout>} />
+        <Route path="/custom-order" element={<Layout><CustomOrder /></Layout>} />
+        <Route path="/gallery" element={<Layout><Gallery /></Layout>} />
+        <Route path="/hero" element={<Layout><Hero /></Layout>} />
+        <Route path="/hero-image" element={<Layout><HeroImage /></Layout>} />
+        <Route path="/our-story" element={<Layout><OurStory /></Layout>} />
+        <Route path="/patch-types" element={<Layout><PatchTypes /></Layout>} />
+        <Route path="/patch-types/embroidered-patches" element={<Layout><EmbroideredPatches /></Layout>} />
+        <Route path="/patch-types/chenille-patches" element={<Layout><ChenillePatches /></Layout>} />
+        <Route path="/patch-types/woven-patches" element={<Layout><WovenPatches /></Layout>} />
+        <Route path="/patch-types/sequin-patches" element={<Layout><SequinPatches /></Layout>} />
+        <Route path="/patch-types/glossy-sticker-patches" element={<Layout><GlossyStickerPatches /></Layout>} />
+        <Route path="/patch-types/vinyl-sticker-patches" element={<Layout><VinylStickerPatches /></Layout>} />
+        <Route path="/pricing" element={<Layout><Pricing /></Layout>} />
+        <Route path="/size-guide" element={<Layout><SizeGuide /></Layout>} />
+        <Route path="/backing-guide" element={<Layout><BackingGuide /></Layout>} />
+        <Route path="/success" element={<Layout><Success /></Layout>} />
+        <Route path="/payment-success" element={<Layout><PaymentSuccess /></Layout>} />
+        <Route path="/terms" element={<Layout><TermsOfService /></Layout>} />
+        <Route path="/privacy" element={<Layout><PrivacyPolicy /></Layout>} />
+        <Route path="/refund-policy" element={<Layout><RefundPolicy /></Layout>} />
+        <Route path="/approve-action/:token" element={<Layout><ApproveAction /></Layout>} />
+        <Route path="/request-changes/:token" element={<Layout><RequestChanges /></Layout>} />
+        <Route path="/mockup-confirmed" element={<Layout><MockupConfirmed /></Layout>} />
+        <Route path="/mockup-approved/:orderId" element={<Layout><MockupApproved /></Layout>} />
+        <Route path="/mockup-revision/:orderId" element={<Layout><MockupRevision /></Layout>} />
+        <Route path="/track-order" element={<Layout><TrackOrder /></Layout>} />
+        <Route path="/welcome-message" element={<Layout><WelcomeMessage /></Layout>} />
+        <Route path="/upload-test" element={<UploadTest />} />
+        <Route path="/form-test" element={<FormIsolationTest />} />
+        <Route path="/admin/login" element={<AdminLogin />} />
         <Route
           path="/admin"
           element={
-            <SnapRouteWrapper>
-              <PrivateRoute>
-                <AdminLayout>
-                  <AdminDashboard />
-                </AdminLayout>
-              </PrivateRoute>
-            </SnapRouteWrapper>
+            <PrivateRoute>
+              <AdminLayout><AdminDashboard /></AdminLayout>
+            </PrivateRoute>
           }
         />
         <Route
           path="/admin/order/:id"
           element={
-            <SnapRouteWrapper>
-              <PrivateRoute>
-                <AdminLayout>
-                  <AdminOrderDetails />
-                </AdminLayout>
-              </PrivateRoute>
-            </SnapRouteWrapper>
+            <PrivateRoute>
+              <AdminLayout><AdminOrderDetails /></AdminLayout>
+            </PrivateRoute>
           }
         />
-        <Route
-          path="*"
-          element={
-            <SnapRouteWrapper>
-            <Layout>
-              <NotFound />
-            </Layout>
-            </SnapRouteWrapper>
-          }
-        />
+        <Route path="*" element={<Layout><NotFound /></Layout>} />
       </Routes>
-
-      {!isSnap && <WhatsAppButton />}
+      <WhatsAppButton />
     </HelmetProvider>
   );
 }
