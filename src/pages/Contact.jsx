@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+﻿import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -9,7 +9,7 @@ import { Mail, ShieldCheck, Ruler, Zap, MessageCircle, Loader2, Send, Globe, Che
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false); // 🚀 NEW: Tracks if the form was successful
+  const [isSuccess, setIsSuccess] = useState(false); // ðŸš€ NEW: Tracks if the form was successful
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -32,7 +32,7 @@ const Contact = () => {
       const response = await api.post(`/order-actions/contact`, formData);
 
       if (response.data.success) {
-        setIsSuccess(true); // 🚀 Trigger the success screen!
+        setIsSuccess(true); // ðŸš€ Trigger the success screen!
         setFormData({ name: "", email: "", subject: "", message: "" });
       }
     } catch (err) {
@@ -147,7 +147,7 @@ const Contact = () => {
           {/* Right Side: Form OR Success Screen */}
           <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }}>
             {isSuccess ? (
-              /* 🚀 SUCCESS SCREEN UI */
+              /* ðŸš€ SUCCESS SCREEN UI */
               <div className="bg-white p-8 md:p-14 rounded-[2.5rem] shadow-2xl border border-gray-100 text-center flex flex-col items-center justify-center h-full min-h-[500px]">
                 <div className="w-24 h-24 bg-green-50 text-green-500 rounded-full flex items-center justify-center mb-6">
                   <CheckCircle2 className="w-12 h-12" />
@@ -170,7 +170,7 @@ const Contact = () => {
                 </Button>
               </div>
             ) : (
-              /* 📝 STANDARD FORM UI */
+              /* ðŸ“ STANDARD FORM UI */
               <form onSubmit={handleSubmit} className="bg-white p-6 md:p-12 rounded-[2.5rem] shadow-2xl border border-gray-100">
                 <div className="space-y-6">
                   <div className="space-y-2">
@@ -251,7 +251,53 @@ const Contact = () => {
           </motion.div>
         </div>
       </div>
-    </div>
+
+      <section className="py-24 bg-gray-50 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white border border-gray-100 rounded-[2.5rem] p-8 md:p-12 shadow-sm">
+            <div className="max-w-3xl mx-auto space-y-10">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-heading tracking-tight">What to Include in Your Message</h2>
+                <p className="text-gray-600 leading-relaxed text-lg">
+                  Getting a quote from Custom Dance Patches is simple. When you reach out, include your studio name, the dance styles your students perform, the approximate number of patches you need, your preferred patch type (embroidered, chenille, or sequin), and your competition or recital deadline. The more detail you share upfront, the faster Stacy can prepare your free digital mockup.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 font-heading tracking-tight">What Happens After You Contact Us</h3>
+                <p className="text-gray-600 leading-relaxed text-lg">
+                  Once Stacy receives your message, she personally reviews your requirements and responds within 24 to 48 hours. You will receive a free digital mockup based on your studio logo and color palette before any payment is required. There are no setup fees, no digitizing fees, and no minimum beyond 10 pieces. We serve dance studios in the USA, UK, Canada, and Australia with free express worldwide shipping on every order.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-8 font-heading tracking-tight">Frequently Asked Questions</h3>
+                <div className="space-y-6">
+                  <div className="bg-gray-50 border border-gray-100 rounded-3xl p-6">
+                    <h4 className="font-bold text-gray-900 mb-3">How long does production take?</h4>
+                    <p className="text-gray-600 leading-relaxed">
+                      Standard production takes 10 to 14 business days after your mockup is approved. Rush orders are available on request.
+                    </p>
+                  </div>
+                  <div className="bg-gray-50 border border-gray-100 rounded-3xl p-6">
+                    <h4 className="font-bold text-gray-900 mb-3">Can I see a mockup before I pay?</h4>
+                    <p className="text-gray-600 leading-relaxed">
+                      Yes. Every order begins with a free digital mockup. You approve the design before production starts and before any payment is taken.
+                    </p>
+                  </div>
+                  <div className="bg-gray-50 border border-gray-100 rounded-3xl p-6">
+                    <h4 className="font-bold text-gray-900 mb-3">What is the minimum order quantity?</h4>
+                    <p className="text-gray-600 leading-relaxed">
+                      Our minimum is just 10 pieces, making us ideal for soloists, small competition groups, and studios testing a new design before ordering for the full team.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      </div>
   );
 };
 
